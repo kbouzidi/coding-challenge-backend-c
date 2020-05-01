@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
     "start": "node app.js",
-    "test": "./node_modules/mocha/bin/mocha ./test/ --timeout 35000 --exit"
+    "test": "./node_modules/mocha/bin/mocha ./test/ --timeout 35000 --exit",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "WTFPL",
@@ -39,6 +41,8 @@
     "mongoose": "^5.3.14",
     "requireindex": "^1.2.0",
     "sessions": "0.0.2-7",
-    "swagger-tools": "^0.10.4"
-  }
+    "swagger-tools": "^0.10.4",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
